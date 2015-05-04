@@ -1,0 +1,40 @@
+<!--
+Awesome stuff, the modular and interoperable way.
+
+##### Example
+
+    <post-card></post-card>
+
+@element post-card
+@blurb Awesome stuff, the modular and interoperable way
+@status alpha
+@homepage
+-->
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<polymer-element name="post-card" attributes="notitle">
+
+  <template>
+    <!-- build:css styles/post-card.min.css -->
+    <link rel="stylesheet" href="styles/post-card.css" />
+    <!-- endbuild -->
+    <div class="wrapper-card">
+      <div class="head-image">
+        <div class="date-wr">
+          <div class="post-day"><span>31</span></div>
+          <small class="post-month"><span>Nov</span></small>
+          <small class="post-year"><span>2015</span></small>
+        </div>
+      </div>
+      <div class="post-body">
+        <h3>Hello</h3>
+      </div>
+    </div>
+    <content></content>
+
+  </template>
+
+    <!-- build:js scripts/post-card.min.js -->
+    <script src="scripts/post-card.js"></script>
+    <!-- endbuild -->
+
+</polymer-element>
