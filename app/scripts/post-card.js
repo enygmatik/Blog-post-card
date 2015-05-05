@@ -1,45 +1,18 @@
 'use strict';
 // var lib = require('./components/components');
 (function(scope){
-    var polymer = scope.Polymer('post-card', {
-      /**
-       * The `noevent` event is not actually fired from here,
-       * we document it as an example of documenting events.
-       *
-       * @event noevent
-       */
+  var polymer,
+      headerImgSrc = 'http://lorempixel.com/400/300';
 
-      /**
-       * The `notitle` attribute does not yet have a purpose.
-       *
-       * @attribute notitle
-       * @type string
-       */
-      notitle: '',
-
-      /**
-       * The `aProp` is a property that does something cool.
-       *
-       * @property aProp
-       * @type bool
-       */
-      aProp: false,
-
-      ready: function() {
-      },
-
-      /**
-       * The `task` method does no work at this time.
-       *
-       * @method task
-       * @return {Object} Returns undefined.
-       * @param {String} dummy Serves no purpose today.
-       */
-      task: function(dummy) {
-        return dummy;
-      }
-
-    });
+  polymer = scope.Polymer('post-card', {
+    image: 'url(' + headerImgSrc + ');',
+    day: '4',
+    month: 'May',
+    year: '2015',
+    toPost: 'link',
+    postTitle: 'CSS3 Animation',
+    postPreview: 'bla bla bla'
+  });
 
     return polymer;
 })(window);

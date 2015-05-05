@@ -11,22 +11,29 @@ Awesome stuff, the modular and interoperable way.
 @homepage
 -->
 <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-<polymer-element name="post-card" attributes="notitle">
+<polymer-element name="post-card" attributes="image day month year postTitle postPreview ">
 
   <template>
     <!-- build:css styles/post-card.min.css -->
     <link rel="stylesheet" href="styles/post-card.css" />
     <!-- endbuild -->
+    <style>
+      .card-header {
+        background: {{ image }};
+      }
+    </style>
     <div class="wrapper-card">
-      <div class="head-image">
+      <div class="card-header">
         <div class="date-wr">
-          <div class="post-day"><span>31</span></div>
-          <small class="post-month"><span>Nov</span></small>
-          <small class="post-year"><span>2015</span></small>
+          <span class="post-day"><span>{{ day }}</span></span>
+          <span class="post-month"><span>{{ month }}</span></span>
+          <span class="post-year"><span>{{ year }}</span></span>
         </div>
       </div>
       <div class="post-body">
-        <h3>Hello</h3>
+        <a class="post-title" href="{{toPost}}"> <h3>{{postTitle}}</h3> </a>
+        <p>{{postPreview}}</p>
+          <a href="">[...]</a></p>
       </div>
     </div>
     <content></content>
